@@ -17,9 +17,9 @@ Following in the tradition of the ChipWhisperer, but with even cheaper hardware,
 
 ## Presentation
 
-During the workshop we re-used a presentation created by Ilya Kizhvatov. The original slides can be found here:
-https://www.slideshare.net/phdays/ss-35302416
-A recording of Ilya himself giving the talk can be found here: https://vimeo.com/100108647
+During the workshop we re-used a presentation created by Ilya Kizhvatov. The original slides can be found here:  
+https://www.slideshare.net/phdays/ss-35302416  
+A recording of Ilya himself giving the talk can be found here: https://vimeo.com/100108647  
 
 
 ## Code repository
@@ -28,19 +28,19 @@ The code in the repository in particular the FI and Scope FW parts should be con
 
 The repository is organized as follows:
 
-Scope   - Scope and Glitcher Firmware (firmware in lufa\*/Projects/HorrorScope
-Acq     - Python acquisition scripts including the Scope GUI
-FI      - Python FI scripts/ including plotting
-julia   - The julia jupyter notebook
-presentation - The presentation for the workshop
-PCB     - PCB files
+Scope   - Scope and Glitcher Firmware (firmware in lufa\*/Projects/HorrorScope  
+Acq     - Python acquisition scripts including the Scope GUI  
+FI      - Python FI scripts/ including plotting  
+julia   - The julia jupyter notebook  
+presentation - The presentation for the workshop  
+PCB     - PCB files  
 
 #### Patched LUFA
-The Scope folder contains an entire copy of LUFA http://fourwalledcubicle.com/LUFA.php
+The Scope folder contains an entire copy of LUFA http://fourwalledcubicle.com/LUFA.php  
 
-To maximize the amount of SRAM available as sample memory LUFA has been patched to minimize the number and size of USB buffers. 
+To maximize the amount of SRAM available as sample memory LUFA has been patched to minimize the number and size of USB buffers.   
 
-The patch has been applied in Drivers/USB/Core/XMEGA/Endpoint_XMEGA.h
+The patch has been applied in Drivers/USB/Core/XMEGA/Endpoint_XMEGA.h  
 
 ## Installation
 
