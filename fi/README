@@ -1,0 +1,7 @@
+
+#ONELINERS FTW
+./parseLog.py log.log | sort -n | grep ' 4$' | awk {'print $3'} | sort -u | wc
+-l # How many uniq faults do i have?
+# extract faults for jean gray, you have to add the correct response to the
+top
+./parseLog.py log.log | sort -n | grep ' 4$' | awk {'print $3 " " $3'} | sort -u > JeanGrey-master/tracefile

@@ -1,0 +1,16 @@
+
+USES AESLIB from:
+    https://github.com/DavyLandman/AESLib
+Clone and move into ~/Arduino/libraries
+And name the folder AESLib
+
+
+Encrypt command has the format: 'a' + 16 bytes input data + '\n
+
+
+Preparing the board:
+    - Program board and verify functioning.
+    - Cut next to the diode -> plug into USB -> power led shouldn't turn on
+    - Cut next to the last pin of the USB chip
+    - Solder diode (side with the cut) to pwr 5v (First put in a pin, solder to bottom of pin)
+
