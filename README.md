@@ -3,8 +3,9 @@
 
 # HorrorScope / ScaCheapier
 
-This is repository with all the firmware source, scripts and notebooks for the ScaCheapier workshop given at 35c3. 
+This repository contains all the firmware source, scripts and notebooks for the ScaCheapier workshop given at 35c3. 
 
+We will also give a talk about this work at Troopers 2019 NGI, with a different perspective. We'll have the slides uploaded soon after the presentation. And hopefully update this repo - feel free to remind us if necessary!
 
 ## Abstract 
 From: https://events.ccc.de/congress/2018/wiki/index.php/Session:ScaCheapier
@@ -17,14 +18,15 @@ Following in the tradition of the ChipWhisperer, but with even cheaper hardware,
 
 ## Presentation
 
-During the workshop we re-used a presentation created by Ilya Kizhvatov. The original slides can be found here:  
+During the workshop we partially re-used a presentation created by Ilya Kizhvatov. The original slides can be found here:  
 https://www.slideshare.net/phdays/ss-35302416  
 A recording of Ilya himself giving the talk can be found here: https://vimeo.com/100108647  
 
+If you saw our talk at Troopers, you missed out on all the theory; you can watch Ilya's presentation to get it!
 
 ## Code repository
 
-The code in the repository in particular the FI and Scope FW parts should be considered PoC code.
+The code in the repository, in particular the FI and Scope FW parts, should be considered PoC code. In fact, don't take anything here too seriously. Have fun!
 
 The repository is organized as follows:
 
