@@ -5,7 +5,7 @@
 
 This repository contains all the firmware source, scripts and notebooks for the ScaCheapier workshop given at 35c3. 
 
-We will also give a talk about this work at Troopers 2019 NGI, with a different perspective. We'll have the slides uploaded soon after the presentation. And hopefully update this repo - feel free to remind us if necessary!
+We gave a talk about this work at Troopers 2019 NGI, with a different perspective. You can find the slides in the presentation directory.
 
 ## Abstract 
 From: https://events.ccc.de/congress/2018/wiki/index.php/Session:ScaCheapier
@@ -34,7 +34,7 @@ Scope   - Scope and Glitcher Firmware (firmware in lufa\*/Projects/HorrorScope
 Acq     - Python acquisition scripts including the Scope GUI  
 FI      - Python FI scripts/ including plotting  
 julia   - The julia jupyter notebook  
-presentation - The presentation for the workshop  
+presentation - The presentation for the workshop (and the troopers talk) 
 PCB     - PCB files  
 
 #### Patched LUFA
