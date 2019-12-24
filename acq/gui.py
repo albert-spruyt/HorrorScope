@@ -6,7 +6,7 @@ import sys
 from PyQt5.QtChart import QChart, QChartView, QLineSeries
 from PyQt5.QtGui import QPolygonF, QPainter
 from PyQt5.QtWidgets import QMainWindow, QHBoxLayout, QVBoxLayout, QPushButton,QWidget,QLabel,QComboBox, QApplication, QCheckBox, QLineEdit
-from PyQt5.QtCore import pyqtSlot,Qt
+from PyQt5.QtCore import pyqtSlot,Qt,QTimer
 import numpy as np
 
 class LabeledComboBox(QComboBox):
@@ -70,6 +70,14 @@ class TestWindow(QMainWindow):
         self.runButton = QPushButton("Get")
         controlLayout.addWidget(self.runButton)
 
+	# Auto refresh timer and control (For a demo)
+        self.auto_box = QCheckBox("Auto (vroom vroom)")
+        controlLayout.addWidget(self.auto_box)
+
+        self._refreshTimer = QTimer()
+        self._refreshTimer.timeout.connect(self.auto)
+        self._refreshTimer.start(100.0) # timeout in milli seconds
+
         self.channel1 = QCheckBox("fetch 12bit")
         controlLayout.addWidget(self.channel1)
 
@@ -95,6 +103,11 @@ class TestWindow(QMainWindow):
         self.setCentralWidget(self.layoutWidget)
 
         self.show()
+
+    @pyqtSlot()
+    def auto(self):
+        if self.auto_box.isChecked():
+            self.on_get()
 
     @pyqtSlot()
     def on_get(self):
@@ -123,7 +136,7 @@ class TestWindow(QMainWindow):
         pen = curve.pen()
         pen.setColor(color)
         pen.setWidthF(.1)
-        curve.setPen(pen)
+        #curve.setPen(pen)
         curve.setUseOpenGL(True)
         curve.append(series_to_polyline(xdata, ydata))
         self.chart.addSeries(curve)

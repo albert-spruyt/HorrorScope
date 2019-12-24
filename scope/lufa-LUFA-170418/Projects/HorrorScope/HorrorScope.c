@@ -30,7 +30,7 @@ int main(void) {
 	 OSC_CTRL |= OSC_RC32MEN_bm | OSC_XOSCEN_bm;    // Enabled the internal 32MHz oscillator
 	 while ((OSC_STATUS & OSC_RC32MRDY_bm) == 0)
 	      ;  // wait for oscillator to finish starting.
-	 _PROTECTED_WRITE(CLK_CTRL, CLK_SCLKSEL_RC32M_gc);  // select the 32MHz oscillator as system clock.
+	 PROTECTED_WRITE(CLK_CTRL, CLK_SCLKSEL_RC32M_gc);  // select the 32MHz oscillator as system clock.
 
     //OSC_DFLLCTRL |= OSC_RC2MCREF_bm;
 
@@ -86,7 +86,7 @@ int main(void) {
     PR.PRPD |= PR_TWI_bm | PR_SPI_bm;    //maybe uart 
     PR.PRPE |= PR_TWI_bm | PR_SPI_bm | PR_USART0_bm | PR_USART1_bm | PR_TC0_bm | PR_TC1_bm;
     PR.PRPF |= PR_TWI_bm | PR_SPI_bm | PR_USART0_bm | PR_USART1_bm | PR_TC0_bm | PR_TC1_bm;
-    ccp_write_io((void*)&NVM.CTRLB, NVM_EPRM_bm); //We don't use EEPROM
+    //ccp_write_io((void*)&NVM.CTRLB, NVM_EPRM_bm); //We don't use EEPROM
 
 	while(1){
         char command = USB_serial_get_char();
